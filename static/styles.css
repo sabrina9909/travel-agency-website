@@ -8,6 +8,7 @@ body {
     color: #333;
 }
 
+/* Header Styles */
 header {
     background-color: #003399;
     padding: 20px;
@@ -15,37 +16,36 @@ header {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center;
     z-index: 1000;
 }
 
 .logo {
+    position: absolute; 
+    left: 20px;
     font-size: 24px;
     color: white;
-    margin-left: 20px;
 }
 
-nav ul {
+.nav-menu {
     list-style-type: none;
+    display: flex;
+    gap: 40px; 
     margin: 0;
     padding: 0;
 }
 
-    nav ul li {
-        display: inline;
-        margin-right: 20px;
+    .nav-menu li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
     }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
+        .nav-menu li a:hover {
+            text-decoration: underline;
         }
 
-header ul li a:hover {
-    text-decoration: underline;
-}
 
 /* Image Carousel */
 .carousel {
@@ -127,6 +127,59 @@ p, body {
     .tour-item h3 {
         color: #003399;
     }
+
+/* Tour Detail Section */
+.tour-detail {
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.detail-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tour-info {
+    max-width: 500px;
+    text-align: left;
+}
+
+    .tour-info p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .tour-info ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .tour-info button {
+        background-color: #003399;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .tour-info button:hover {
+            background-color: #0055cc;
+        }
 
 /* About Section */
 #about {
