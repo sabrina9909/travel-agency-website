@@ -142,7 +142,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Get in Touch</h2>
-        <form action="#" method="POST">
+        <form id="contact-form" action="#" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email</label>
@@ -151,7 +151,11 @@
             <textarea id="message" name="message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        <div id="confirmation-message" style="display: none; margin-top: 20px; color: green; font-weight: bold;">
+            Soon we will contact you!
+        </div>
     </section>
+
 
     <!-- Footer Section -->
     <footer>
@@ -163,5 +167,16 @@
 
     <!-- JavaScript for Carousel -->
     <script src="static/app.js"></script>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+
+            // Hide the form and show the confirmation message
+            document.getElementById("contact-form").style.display = "none";
+            document.getElementById("confirmation-message").style.display = "block";
+        });
+    </script>
+
 </body>
 </html>
